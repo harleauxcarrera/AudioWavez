@@ -1,32 +1,30 @@
-.App {
-  text-align: center;
+/*GLOBALS*/
+body{
+  font-family: 'Special Elite';
+  background-color: blanchedalmond 
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+/*BODY*/
+body, html {
+  /* The image used */
+  background-image: url("http://getwallpapers.com/wallpaper/full/e/9/4/629789.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/*HEADER*/
+.navbar-default{
+  background-color: rgb(72, 82, 105);
+  border-color: rgb(72, 82, 105);
+  border-radius: 0;
+  height: 80px;
+  padding-top: 15px;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
