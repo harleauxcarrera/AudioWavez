@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import {Navbar, NavItem, Nav, ImageAvatar} from 'react-bootstrap';
-import Avatarz from './util/Avatarz';
+import React, { Component } from "react";
+import { Navbar, NavItem, Nav, ImageAvatar } from "react-bootstrap";
+import Avatarz from "./util/Avatarz";
 class NavBar extends Component {
   render() {
     return (
@@ -8,13 +8,11 @@ class NavBar extends Component {
         <Navbar inverse collapseOnSelect>
           <Navbar.Header>
             <Navbar.Brand>
-              <Avatarz source="https://d3c1jucybpy4ua.cloudfront.net/data/53648/big_picture/Chance.jpg?1494835487"/>
               <a href="#brand">AudioWavez</a>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>
           <Navbar.Collapse>
-           
             <Nav pullRight>
               <NavItem eventKey={1} href="#">
                 About
@@ -25,8 +23,6 @@ class NavBar extends Component {
             </Nav>
           </Navbar.Collapse>
         </Navbar>
-        
-
       </div>
     );
   }
