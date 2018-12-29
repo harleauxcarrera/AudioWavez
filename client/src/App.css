@@ -9,34 +9,36 @@ body {
   background-color: rgb(72, 82, 105);
   border-color: rgb(72, 82, 105);
   border-radius: 0;
-  height: 80px;
   padding-top: 15px;
 }
 
 /*BODY*/
-body,
-html {
-  /* The image used */
+
+html, body {
   background-image: url("http://getwallpapers.com/wallpaper/full/e/9/4/629789.jpg");
-
-  /* Full height */
   height: 100%;
-
-  /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+.body{
+  padding: 0 10px 0 10px;
+}
+
 /*FOOTER*/
-.footer {
-  height: 300px;
-  background-color: rgb(72, 82, 105);
+.fuck {
+ background-color: rgb(72, 82, 105);
   color: white;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 200px;
-  padding-top: 60px;
-  padding-left: 60px;
+  padding: 20px  0px 20px 60px;
+  text-align: center;
+}
+.fuck a:hover{
+  text-decoration: none;
+  color: white;
+  
+}
+
+.fuck a{
+  padding-right: 30px;
 }

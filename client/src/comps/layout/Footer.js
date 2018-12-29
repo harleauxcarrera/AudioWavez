@@ -1,18 +1,23 @@
 import React, { Component } from "react";
-import { Col, Grid } from "react-bootstrap";
+import { Col, Grid , Row} from "react-bootstrap";
 import "../../App.css";
+
+
 class Footer extends Component {
   render() {
     return (
-      <div className="footer">
-        <Col lg={4} md={4} sm={4} xs={4}>
-          <h4>Howdy</h4>
-        </Col>
-        <Col lg={8} md={8} sm={8} xs={8}>
-          <h4>AudioWavez is a project made with love by Harleaux Carrera</h4>
+      <Row className = "fuck">
+        <Col lg={12} md={12} sm={12} xs={12}>
+          <h5>AudioWavez is a project made with <ion-icon name="heart"></ion-icon> by Harleaux Carrera</h5>
+          <h3>
+            <a href="https://www.google.com"><ion-icon name="logo-facebook"></ion-icon> </a>
+            <a><ion-icon name="logo-youtube"></ion-icon></a>
+            <a><ion-icon name="logo-instagram"></ion-icon></a>
+
+            </h3>
           2018 Scottsdale, Arizona
         </Col>
-      </div>
+      </Row>
     );
   }
 }

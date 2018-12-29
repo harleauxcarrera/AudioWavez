@@ -15,7 +15,7 @@ function ImageAvatars(props) {
   const { classes } = props;
   return (
    
-      <Avatar alt="Remy Sharp" src={props.source} className={classes.avatar} />
+      <Avatar  src={props.fuck} className={classes.avatar} />
      
    
   );

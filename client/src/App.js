@@ -1,14 +1,15 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import NavBar from "./comps/NavBar";
 import Footer from "./comps/layout/Footer";
+import Body from "./comps/layout/Body";
 class App extends Component {
   render() {
     return (
       <div className="bg">
         <NavBar />
-        <Footer />
+        <Body/>
+        <Footer/>
       </div>
     );
   }

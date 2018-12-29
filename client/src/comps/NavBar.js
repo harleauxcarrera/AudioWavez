@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import { Navbar, NavItem, Nav, ImageAvatar } from "react-bootstrap";
-import Avatarz from "./util/Avatarz";
+import { Navbar, NavItem, Nav } from "react-bootstrap";
+import Avatarz from './util/Avatarz';
 class NavBar extends Component {
   render() {
     return (
       <div>
-        <Navbar inverse collapseOnSelect>
+        <Navbar inverse >
           <Navbar.Header>
             <Navbar.Brand>
               <a href="#brand">AudioWavez</a>
@@ -24,7 +24,7 @@ class NavBar extends Component {
           </Navbar.Collapse>
         </Navbar>
       </div>
-    );
+    )
   }
 }
 
