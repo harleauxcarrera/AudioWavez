@@ -10,12 +10,11 @@ class Footer extends Component {
         <Col lg={12} md={12} sm={12} xs={12}>
           <h5>AudioWavez is a project made with <ion-icon name="heart"></ion-icon> by Harleaux Carrera</h5>
           <h3>
-            <a href="https://www.google.com"><ion-icon name="logo-facebook"></ion-icon> </a>
-            <a><ion-icon name="logo-youtube"></ion-icon></a>
-            <a><ion-icon name="logo-instagram"></ion-icon></a>
-
-            </h3>
-          2018 Scottsdale, Arizona
+              <a  href="https://www.google.com"><ion-icon name="logo-facebook"></ion-icon> </a>
+              <a href="https://www.google.com"><ion-icon name="logo-youtube"></ion-icon></a>
+              <a href="https://www.google.com"><ion-icon name="logo-instagram"></ion-icon></a>
+          </h3>
+          <h5>&#9400; 2018 Scottsdale, Arizona</h5>
         </Col>
       </Row>
     );

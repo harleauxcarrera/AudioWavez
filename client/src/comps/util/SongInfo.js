@@ -14,9 +14,9 @@ const style = {
     return (
       <div>
           <ListGroup>
-            <ListGroupItem>Title : <code>AstroWorld</code> </ListGroupItem>
-            <ListGroupItem>Length :<code>3:36</code></ListGroupItem>
-            <ListGroupItem>Date Released :<code>11-29-2018</code></ListGroupItem>
+            <ListGroupItem>Title: <code> AstroWorld</code> </ListGroupItem>
+            <ListGroupItem>Length:<code> 3:36</code></ListGroupItem>
+            <ListGroupItem>Date Released:<code> 11-29-2018</code></ListGroupItem>
             <ListGroupItem> <h4 style= {style} >PENDING SALE</h4></ListGroupItem>
          </ListGroup>
       </div>
