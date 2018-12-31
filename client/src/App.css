@@ -12,6 +12,14 @@ body {
   padding-top: 15px;
 }
 
+.headerz{
+  background-color: #273c75;
+  text-align:center;
+  color: white;
+  height: 300px;
+  padding-top: 30px;
+}
+
 /*BODY*/
 
 html, body {
@@ -20,6 +28,7 @@ html, body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 @media screen and (max-width:1024px){
   html, body {

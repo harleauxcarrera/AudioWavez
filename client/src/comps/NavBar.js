@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import { Navbar, NavItem, Nav } from "react-bootstrap";
 import Avatarz from './util/Avatarz';
+const style = {
+  display: 'inline'
+}
 class NavBar extends Component {
   render() {
     return (
