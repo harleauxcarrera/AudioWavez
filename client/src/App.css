@@ -17,10 +17,14 @@ body {
   text-align:center;
   color: white;
   height: 100vh;
-  padding-top: 236px;
   opacity: 0.8;
-  padding-left: 200px;
-  padding-right: 200px;
+  padding-top:20%;
+  padding: 25% 10% 10% 10%;
+}
+@media screen and (max-width: 640px){
+  .headerz{
+    padding: 85% 10% 10% 10%;
+  }
 }
 
 
@@ -33,6 +37,7 @@ html, body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  overflow-x: hidden;
 }
 @media screen and (max-width:1024px){
   html, body {
@@ -59,5 +64,20 @@ html, body {
 }
 .fuck h3, h5{
   font-weight: bolder;
+}
+
+/*TRACK UPLOAD FORM*/
+.main{
+  padding: 120px 0;
+}
+
+.main-center{
+  margin-top: 30px;
+  margin: 0 auto;
+  max-width: 400px;
+   padding: 10px 40px;
+ background:#009edf;
+     color: #FFF;
+   text-shadow: none;
 }
 
