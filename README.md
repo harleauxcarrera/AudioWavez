@@ -22,3 +22,5 @@
     5. Define the onChange function
     6. Need to use bind.this in the constructor or alternativley use an arrow function so you don'thave to bind int he constructor 
     7. now that we have the onSubmit func console loggin the new user, install axios to make an actual POST request to our API and console log the user after that  ( handle input validation in previous video)    
+    8. make the axios post request in the onSubmit func of the trackUp form
+        proxy in server side package.json needed ( proxy: localhost:5000) this way, this isn't needed everytime axios makes a request

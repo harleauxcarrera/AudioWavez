@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../../App.css';
+import axios from 'axios';
 
  const style = {
    backgroundColor:'blue',
@@ -39,7 +40,11 @@ onSubmit = (e) => {
 		available : this.state.available,
 		date : this.state.date, 
 	}; 
-	console.log(newTrack);
+	// console.log(newTrack); //check if new track is created 
+	axios.post('/api/tracks', newTrack)
+		.then(res=> console.log(res.data))
+		.catch(err=> console.log(err))
+
 }
   render() {
     return (
