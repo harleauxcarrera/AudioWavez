@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "../../App.css";
-import axios from "axios";
 import classnames from "classnames";
 import {connect} from 'react-redux';//used for using redux inside a component
 import {uploadTrack} from '../../actions/trackUpAction';
@@ -30,6 +29,12 @@ class TrackUp extends Component {
       date: "",
       errors: {}
     };
+  }
+  //if errors props are passed via redux, map those to component state as well
+  componentWillReceiveProps(nextProps) {
+    if(nextProps.errors){
+      this.setState({errors: nextProps.errors})
+    }
   }
 
   //set the state's fields to whatever is set in the input fields
@@ -175,7 +180,8 @@ TrackUp.propTypes = {
 }
 
 const mapStateToProps = (state) => ({
-  trax: state.trax //trax is coming from the root reducer (index.js) in reducer folder
+  trax: state.trax, //trax is coming from the root reducer (index.js) in reducer folder
+  errors: state.errors
 })
 
 export default connect(mapStateToProps, {uploadTrack})(TrackUp); //first arg to connect is mapStateToProps which pulls state from redux store and maps to props, second is all the actions needed

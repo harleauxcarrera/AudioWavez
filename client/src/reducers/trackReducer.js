@@ -1,4 +1,4 @@
-import { TEST_DISPATCH } from "../actions/types";
+import GET_ERRORS from '../actions/types';
 
 const initialState = {
   isAuthenticated: false,
@@ -7,11 +7,7 @@ const initialState = {
 
 export default function(state = initialState, action) {
   switch (action.type) {
-    case TEST_DISPATCH:
-      return {
-        ...state,
-        track: action.payload
-      };
+   
     default:
       return state;
   }
