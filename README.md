@@ -24,3 +24,14 @@
     7. now that we have the onSubmit func console loggin the new user, install axios to make an actual POST request to our API and console log the user after that  ( handle input validation in previous video)    
     8. make the axios post request in the onSubmit func of the trackUp form
         proxy in server side package.json needed ( proxy: localhost:5000) this way, this isn't needed everytime axios makes a request
+    9. next we are going to use the package 'validator' to create validation files for each form 
+    10. check that validation is working (using postman)    
+    11. next thing to do is implement redux because the axios http request will be done using a redux action/reducer and will not be done inside the component (onSubmit form will call the redux action and not make the axios request in there)
+    12. install redux react-redux and redux -thunk
+    13. Wrap App.js in a Provider from react redux
+    14.Lets be able to add media now
+    15. Uploading Files to mongoDB with GridFS Traversy Youtube Video
+    16. GridFS allows to upload to mongo, and gridfs-stream is to stream to and from mongo
+    17. try this again later
+    18.continue implementing redux 
+    

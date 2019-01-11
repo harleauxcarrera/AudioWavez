@@ -5,18 +5,24 @@ import Footer from "./comps/layout/Footer";
 import Body from "./comps/layout/Body";
 import Header from './comps/layout/Header';
 import TrackUp from './comps/uploads/TrackUp';
+import {Provider} from 'react-redux';
+import store from './store';
+
+
 class App extends Component {
   render() {
     return (
-      <Router>
-      <div className="bg">
-      <Route exact path="/upload/track" component={TrackUp}/>
-      <Route exact path="/" component = {Header}/> 
-      <Route exact path="/body" component={Body} />
-        
-        
-      </div>
-      </Router>
+      <Provider store={store}>
+        <Router >
+        <div className="bg">
+          <Route exact path="/upload/track" component={TrackUp}/>
+          <Route exact path="/" component = {Header}/> 
+          <Route exact path="/body" component={Body} />
+            
+            
+        </div>
+        </Router>
+      </Provider>
     );
   }
 }
