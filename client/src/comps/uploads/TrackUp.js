@@ -2,6 +2,11 @@ import React, { Component } from "react";
 import "../../App.css";
 import axios from "axios";
 import classnames from "classnames";
+import {connect} from 'react-redux';//used for using redux inside a component
+import {uploadTrack} from '../../actions/trackUpAction';
+import PropTypes from 'prop-types';
+
+
 
 const style = {
   backgroundColor: "blue",
@@ -43,25 +48,30 @@ class TrackUp extends Component {
       available: this.state.available,
       date: this.state.date
     };
+
+    this.props.uploadTrack(newTrack);
     // console.log(newTrack); //check if new track is created
-    axios
-      .post("/api/tracks", newTrack)
-      .then(res => console.log(res.data))
-      .catch(err => this.setState({ errors: err.response.data }));
+    // axios
+    //   .post("/api/tracks", newTrack)
+    //   .then(res => console.log(res.data))
+    //   .catch(err => this.setState({ errors: err.response.data }));
   };
   render() {
     const { errors } = this.state; //same as const errors = this.state.errors;
-
+    const {track} = this.props.trax;
     return (
       <div className="container" style={style2}>
+      
         <div className="main">
+        
           <div className="main-center">
+          {track ? track.title : null}
             <center>
               <h2>Upload Track </h2>
             </center>
-            <form onSubmit={this.onSubmit} autocomplete="off">
+            <form onSubmit={this.onSubmit} autoComplete="off">
               <div className="is-invalid form-group">
-                <label for="Title">Title</label>
+                <label >Title</label>
                 <div className="input-group">
                   <span className="input-group-addon">
                     <i className="fa fa-user fa" aria-hidden="true" />
@@ -80,7 +90,7 @@ class TrackUp extends Component {
               </div>
 
               <div className="form-group">
-                <label for="Length">Length</label>
+                <label htmlFor="Length">Length</label>
                 <div className="input-group">
                   <span className="input-group-addon">
                     <i className="fa fa-envelope fa" aria-hidden="true" />
@@ -97,7 +107,7 @@ class TrackUp extends Component {
               </div>
 
               <div className="form-group">
-                <label for="Image">Image</label>
+                <label htmlFor="Image">Image</label>
                 <div className="input-group">
                   <span className="input-group-addon">
                     <i className="fa fa-users fa" aria-hidden="true" />
@@ -114,7 +124,7 @@ class TrackUp extends Component {
               </div>
 
               <div className="form-group">
-                <label for="Source">Source</label>
+                <label htmlFor="Source">Source</label>
                 <div className="input-group">
                   <span className="input-group-addon">
                     <i className="fa fa-lock fa-lg" aria-hidden="true" />
@@ -131,7 +141,7 @@ class TrackUp extends Component {
               </div>
 
               <div className="form-group">
-                <label for="Available">Available</label>
+                <label htmlFor="Available">Available</label>
                 <div className="input-group">
                   <span className="input-group-addon">
                     <i className="fa fa-lock fa-lg" aria-hidden="true" />
@@ -159,5 +169,13 @@ class TrackUp extends Component {
     );
   }
 }
+TrackUp.propTypes = {
+  uploadTrack: PropTypes.func.isRequired, 
+  trax: PropTypes.object.isRequired
+}
 
-export default TrackUp;
+const mapStateToProps = (state) => ({
+  trax: state.trax //trax is coming from the root reducer (index.js) in reducer folder
+})
+
+export default connect(mapStateToProps, {uploadTrack})(TrackUp); //first arg to connect is mapStateToProps which pulls state from redux store and maps to props, second is all the actions needed

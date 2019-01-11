@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {ListGroupItem, ListGroup, Button} from 'react-bootstrap'
+import {ListGroupItem, ListGroup} from 'react-bootstrap'
 
 const style = {
   backgroundColor: 'red',

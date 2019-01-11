@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import "./App.css";
-import Footer from "./comps/layout/Footer";
+// import Footer from "./comps/layout/Footer";
 import Body from "./comps/layout/Body";
 import Header from './comps/layout/Header';
 import TrackUp from './comps/uploads/TrackUp';

@@ -34,4 +34,5 @@
     16. GridFS allows to upload to mongo, and gridfs-stream is to stream to and from mongo
     17. try this again later
     18.continue implementing redux 
-    
+    19. created reducers folder, created rootReducer(index) and fed subreducers into there
+    20. created actions folder and made types.js 
