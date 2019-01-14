@@ -4,11 +4,11 @@ import classnames from "classnames";
 import {connect} from 'react-redux';//used for using redux inside a component
 import {uploadTrack} from '../../actions/trackUpAction';
 import PropTypes from 'prop-types';
-
+import {withRouter} from 'react-router-dom';
 
 
 const style = {
-  backgroundColor: "blue",
+  backgroundColor: "green",
   padding: "10px 10px 10px 10px",
   borderRadius: "6px"
 };
@@ -35,6 +35,7 @@ class TrackUp extends Component {
     if(nextProps.errors){
       this.setState({errors: nextProps.errors})
     }
+
   }
 
   //set the state's fields to whatever is set in the input fields
@@ -54,13 +55,17 @@ class TrackUp extends Component {
       date: this.state.date
     };
 
-    this.props.uploadTrack(newTrack);
+    this.props.uploadTrack(newTrack, this.props.history); //withRouter is used in the action to be able to redirect using this.props.history
     // console.log(newTrack); //check if new track is created
     // axios
     //   .post("/api/tracks", newTrack)
     //   .then(res => console.log(res.data))
     //   .catch(err => this.setState({ errors: err.response.data }));
   };
+
+
+
+
   render() {
     const { errors } = this.state; //same as const errors = this.state.errors;
     const {track} = this.props.trax;
@@ -75,7 +80,7 @@ class TrackUp extends Component {
               <h2>Upload Track </h2>
             </center>
             <form onSubmit={this.onSubmit} autoComplete="off">
-              <div className="is-invalid form-group">
+              <div className="form-group">
                 <label >Title</label>
                 <div className="input-group">
                   <span className="input-group-addon">
@@ -164,7 +169,7 @@ class TrackUp extends Component {
 
               <center>
                 <button style={style} type="submit">
-                  SUBMIT
+                  Upload dis bitch
                 </button>
               </center>
             </form>
@@ -176,7 +181,8 @@ class TrackUp extends Component {
 }
 TrackUp.propTypes = {
   uploadTrack: PropTypes.func.isRequired, 
-  trax: PropTypes.object.isRequired
+  trax: PropTypes.object.isRequired, 
+  errors: PropTypes.object.isRequired
 }
 
 const mapStateToProps = (state) => ({
@@ -184,4 +190,4 @@ const mapStateToProps = (state) => ({
   errors: state.errors
 })
 
-export default connect(mapStateToProps, {uploadTrack})(TrackUp); //first arg to connect is mapStateToProps which pulls state from redux store and maps to props, second is all the actions needed
+export default connect(mapStateToProps, {uploadTrack})(withRouter(TrackUp)); //first arg to connect is mapStateToProps which pulls state from redux store and maps to props, second is all the actions needed

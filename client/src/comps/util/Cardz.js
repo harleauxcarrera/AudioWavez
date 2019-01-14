@@ -13,6 +13,7 @@ import SkipNextIcon from '@material-ui/icons/SkipNext';
 const styles = theme => ({
   card: {
     display: 'flex',
+    height: 150, 
   },
   details: {
     display: 'flex',
@@ -22,13 +23,15 @@ const styles = theme => ({
     flex: '1 0 auto',
   },
   cover: {
-    width: 360,
+    width: 600,
+  
   },
   controls: {
     display: 'flex',
     alignItems: 'center',
     paddingLeft: theme.spacing.unit,
     paddingBottom: theme.spacing.unit,
+    
   },
   playIcon: {
     height: 38,

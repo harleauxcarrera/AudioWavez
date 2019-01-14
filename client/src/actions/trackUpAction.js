@@ -1,4 +1,4 @@
-import { TEST_DISPATCH } from "./types";
+import { GET_ERRORS } from "./types";
 import axios from "axios";
 
  // axios
@@ -7,10 +7,11 @@ import axios from "axios";
     //   .catch(err => this.setState({ errors: err.response.data }));
 
 //upload track
-export const uploadTrack = trackData => dispatch =>{ //dispatch is needed when we make an ajax request which therefore we need to wait and not just return (notice no return statement)
+export const uploadTrack = (trackData, history) => dispatch =>{ //dispatch is needed when we make an ajax request which therefore we need to wait and not just return (notice no return statement)
      axios
       .post("/api/tracks", trackData)
-      .then(res => console.log(res.data))
+      //console log the track object for now 
+      .then(res =>console.log(res.data),history.push('/landing'))
       .catch(err => 
         dispatch({
           type: GET_ERRORS, 

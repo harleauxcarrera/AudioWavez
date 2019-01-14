@@ -17,7 +17,7 @@ class App extends Component {
         <div className="bg">
           <Route exact path="/upload/track" component={TrackUp}/>
           <Route exact path="/" component = {Header}/> 
-          <Route exact path="/body" component={Body} />
+          <Route exact path="/landing" component={Body} />
             
             
         </div>
