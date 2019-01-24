@@ -14,6 +14,7 @@ const styles = theme => ({
   card: {
     display: 'flex',
     height: 150, 
+    
   },
   details: {
     display: 'flex',

@@ -55,7 +55,7 @@ class TrackUp extends Component {
       date: this.state.date
     };
 
-    this.props.uploadTrack(newTrack, this.props.history); //withRouter is used in the action to be able to redirect using this.props.history
+    this.props.uploadTrack(newTrack, this.props.history); //withRouter is used in the action to be able to redirect using this.props.history   (notice history passed to the action)
     // console.log(newTrack); //check if new track is created
     // axios
     //   .post("/api/tracks", newTrack)

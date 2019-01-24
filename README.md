@@ -36,3 +36,6 @@
     18.continue implementing redux 
     19. created reducers folder, created rootReducer(index) and fed subreducers into there
     20. created actions folder and made types.js 
+    21. finished the upload track action ,  object now being saved to mongodb via redux. (installed withRouter to be able to redirect from within the action and not to comp)
+    22. *** remember to go back and change the type of source and image for the track upload to file types (GRIDFS)
+    
