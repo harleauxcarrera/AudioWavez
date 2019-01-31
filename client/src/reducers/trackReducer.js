@@ -1,4 +1,4 @@
-import GET_ERRORS from '../actions/types';
+import {GET_ERRORS,GET_TRACKS} from '../actions/types';
 
 const initialState = {
   isAuthenticated: false,
@@ -7,7 +7,12 @@ const initialState = {
 
 export default function(state = initialState, action) {
   switch (action.type) {
-   
+   case GET_TRACKS:
+   return{
+     ...state, 
+     tracks: action.payload, 
+     loading: false
+   }
     default:
       return state;
   }

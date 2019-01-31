@@ -1,7 +1,10 @@
 const express = require("express");
 const router = express.Router();
+const mongoose = require ('mongoose');
+const passport = require ('passport');
 
-//load input validation
+
+//Load Validation
 const validateTrackUploadInput = require("../validation/trackUp");
 //Load Track Model
 const Track = require("../models/Tracks");
@@ -42,4 +45,24 @@ router.post("/", (req, res) => {
     }
   });
 });
+
+
+//GET ALL TRACKS
+router.get('/all', (req, res) => {
+  const errors = {};
+
+  Track.find()
+  .populate('track', ['title', 'length'])
+  .then(tracks => {
+    if(!tracks){
+      errors.notrack = 'There are no tracks available';
+      return res.status(404).json(errors); 
+    }
+
+    res.json(tracks);
+  })
+  .catch(err => 
+    res.status(404).json({track: 'there are no tracks'})
+  );
+})
 module.exports = router;

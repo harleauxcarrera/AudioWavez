@@ -19,3 +19,10 @@ export const uploadTrack = (trackData, history) => dispatch =>{ //dispatch is ne
         })
       );
 }
+
+
+// //get all tracks 
+// export const getAllTracks = () => dispatch => {
+//   axios
+//     .get
+// }

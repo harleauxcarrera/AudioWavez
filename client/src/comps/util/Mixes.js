@@ -15,7 +15,7 @@ const style = {
       <div>
           <List style={style}>
           {[0, 1, 2,3,4,5,6].map(item => (
-            <li key="this"  > This</li>
+            <li> This</li>
            ))}
          </List>
       </div>

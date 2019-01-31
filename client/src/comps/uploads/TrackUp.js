@@ -26,7 +26,6 @@ class TrackUp extends Component {
       image: "",
       source: "",
       available: "",
-      date: "",
       errors: {}
     };
   }
