@@ -1,5 +1,13 @@
 import React, { Component } from 'react'
-import '../../App.css'
+import {Button} from 'react-bootstrap'
+import '../../App.css';
+
+
+
+
+
+
+
 class Header extends Component {
   render() {
     return (
@@ -9,6 +17,7 @@ class Header extends Component {
                 Notice the change once a track inside the mix is clicked. 
                 Make sure to check the song info to see if it is available.
             </h4>
+            <Button onClick = {this.onClick} variant = "success">Show me the $$$</Button>
       </div>
     )
   }

@@ -7,6 +7,7 @@ import Header from './comps/layout/Header';
 import TrackUp from './comps/uploads/TrackUp';
 import {Provider} from 'react-redux';
 import store from './store';
+import Tracks from './comps/util/Tracks';
 
 
 class App extends Component {
@@ -18,6 +19,7 @@ class App extends Component {
           <Route exact path="/upload/track" component={TrackUp}/>
           <Route exact path="/" component = {Header}/> 
           <Route exact path="/landing" component={Body} />
+          <Route exact path="/tracks" component={Tracks} />
             
             
         </div>

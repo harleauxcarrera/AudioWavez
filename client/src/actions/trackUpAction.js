@@ -1,10 +1,9 @@
-import { GET_ERRORS } from "./types";
+import {GET_ERRORS} from "./types";
+import {GET_TRACKS} from "./types";
+
 import axios from "axios";
 
- // axios
-    //   .post("/api/tracks", newTrack)
-    //   .then(res => console.log(res.data))
-    //   .catch(err => this.setState({ errors: err.response.data }));
+
 
 //upload track
 export const uploadTrack = (trackData, history) => dispatch =>{ //dispatch is needed when we make an ajax request which therefore we need to wait and not just return (notice no return statement)
@@ -18,11 +17,21 @@ export const uploadTrack = (trackData, history) => dispatch =>{ //dispatch is ne
           payload: err.response.data
         })
       );
-}
+};
 
-
-// //get all tracks 
-// export const getAllTracks = () => dispatch => {
-//   axios
-//     .get
-// }
+export const getTracks = () => dispatch => {
+  axios
+    .get("/api/tracks/all")
+    .then(res =>
+      dispatch({
+        type: GET_TRACKS,
+        payload: res.data
+      })
+    )
+    .catch(err =>
+      dispatch({
+        type: GET_TRACKS,
+        payload: null
+      })
+    );
+};   

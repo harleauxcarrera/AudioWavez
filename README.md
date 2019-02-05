@@ -39,3 +39,9 @@
     21. finished the upload track action ,  object now being saved to mongodb via redux. (installed withRouter to be able to redirect from within the action and not to comp)
     22. *** remember to go back and change the type of source and image for the track upload to file types (GRIDFS)
     
+
+    dunno where I left off but..
+
+    created the GET ALL route in /api/tracks
+
+    now need to create the action getAllTracks and use that in the tracks component to dynamically render all tracks 

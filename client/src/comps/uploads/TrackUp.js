@@ -67,14 +67,12 @@ class TrackUp extends Component {
 
   render() {
     const { errors } = this.state; //same as const errors = this.state.errors;
-    const {track} = this.props.trax;
     return (
       <div className="container" style={style2}>
       
         <div className="main">
         
           <div className="main-center">
-          {track ? track.title : null}
             <center>
               <h2>Upload Track </h2>
             </center>
@@ -180,12 +178,10 @@ class TrackUp extends Component {
 }
 TrackUp.propTypes = {
   uploadTrack: PropTypes.func.isRequired, 
-  trax: PropTypes.object.isRequired, 
   errors: PropTypes.object.isRequired
 }
 
 const mapStateToProps = (state) => ({
-  trax: state.trax, //trax is coming from the root reducer (index.js) in reducer folder
   errors: state.errors
 })
 

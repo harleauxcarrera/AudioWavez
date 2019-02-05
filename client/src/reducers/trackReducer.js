@@ -1,8 +1,7 @@
 import {GET_ERRORS,GET_TRACKS} from '../actions/types';
 
 const initialState = {
-  isAuthenticated: false,
-  track: {}
+  tracks: {}
 };
 
 export default function(state = initialState, action) {
