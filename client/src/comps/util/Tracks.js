@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import List from "@material-ui/core/List";
-import Cardz from "./Cardz";
+import TrackItem from "./TrackItem";
 import {connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import {getTracks} from '../../actions/trackUpAction';
@@ -21,34 +21,22 @@ class Tracks extends Component {
     let trackItems;
 
 
-    if(tracks == null || loading){
-      trackItems = <h4> spinner goes here</h4>
+    if(tracks == null || loading ){
+      trackItems = <h4> loading spinner icon goes here</h4>
     }else{
       if(tracks.length > 0){
-       trackItems =  <h4>Found tracks ...</h4>
+       trackItems =  tracks.map(track => (
+        <li className = "tracks"> <TrackItem className = "tracks" key={track._id} track={track}></TrackItem></li>
+       ))
       }else{
-        trackItems =   <h4>No mixed found...</h4>
+        trackItems =   <h4>No tracks found...</h4>
       }
     }
 
     return (
-      <div className = "traxBody">
+      <div>
         <List style={style}>
-            <li>{trackItems}</li>
-            <li>
-              <Cardz />
-            </li>
-            <li>
-              <Cardz />
-            </li>
-            <li>
-              <Cardz />
-            </li>
-            <li>
-              <Cardz />
-            </li>
-            
-         
+            <li >{trackItems}</li>
         </List>
       </div>
     );

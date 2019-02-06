@@ -52,7 +52,7 @@ router.get('/all', (req, res) => {
   const errors = {};
 
   Track.find()
-  .populate('track5', ['title', 'length'])
+  .populate('track', ['title', 'length'])
   .then(tracks => {
     if(!tracks){
       errors.notrack = 'There are no tracks available';

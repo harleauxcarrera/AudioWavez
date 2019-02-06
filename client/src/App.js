@@ -19,7 +19,6 @@ class App extends Component {
           <Route exact path="/upload/track" component={TrackUp}/>
           <Route exact path="/" component = {Header}/> 
           <Route exact path="/landing" component={Body} />
-          <Route exact path="/tracks" component={Tracks} />
             
             
         </div>
